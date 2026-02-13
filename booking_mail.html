@@ -17,56 +17,100 @@
         text-decoration: none;
         display: inline-block;
       }
+      .footer-link {
+        color: #1b0e2b;
+        text-decoration: none;
+      }
       .btn-link:hover,
       .btn-link:focus,
-      .btn-link:active {
+      .btn-link:active,
+      .footer-link:hover,
+      .footer-link:focus,
+      .footer-link:active {
         color: #ffd400 !important;
+      }
+      .btn-link:visited,
+      .footer-link:visited,
+      a:visited {
+        color: #ffffff !important;
       }
       a:hover,
       a:focus,
       a:active {
         color: #ffd400 !important;
       }
+      a[x-apple-data-detectors],
+      a[x-apple-data-detectors]:hover,
+      a[x-apple-data-detectors]:focus,
+      a[x-apple-data-detectors]:active {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
     </style>
   </head>
   <body style="margin:0; padding:0; background-color:#ffffff;">
+
+    <!-- PREHEADER (unsichtbar für Layout, sichtbar für Gmail Preview) -->
+    <div style="display:none; max-height:0; overflow:hidden; opacity:0; color:transparent;">
+                                                                                           .
+    </div>
+
+
     <!-- Some clients strip <head> styles; keep a small hover fallback here -->
     <style>
       .btn-link:hover,
       .btn-link:focus,
       .btn-link:active,
+      .footer-link:hover,
+      .footer-link:focus,
+      .footer-link:active,
       a:hover,
       a:focus,
       a:active {
         color: #ffd400 !important;
+      }
+      .btn-link:visited,
+      .footer-link:visited,
+      a:visited {
+        color: #ffffff !important;
+      }
+      a[x-apple-data-detectors],
+      a[x-apple-data-detectors]:hover,
+      a[x-apple-data-detectors]:focus,
+      a[x-apple-data-detectors]:active {
+        color: inherit !important;
+        text-decoration: none !important;
       }
     </style>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#fdfdfd;">
       <tr>
         <td align="center" style="padding:0;">
           <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:640px; background-color:#ebebeb;">
-            <!-- ===== HERO: BANDPIC + HEADLINE + LOGO ===== -->
+            <!-- ===== HEADLINE ===== -->
             <tr>
-
-
+              <td align="center" style="padding: 24px 24px 0;">
+                <div style="font-family:'HypotheticalmoonofMercury','Impact','Arial Black',sans-serif; font-size:24px; letter-spacing:1px; color:#111111; text-align:center; line-height:0.7; margin:0;">
+                  BERLIN<br />
+                  <span style="font-size:12px; letter-spacing:1px;">POST PUNK</span>
+                </div>
+              </td>
+            </tr>
+            <!-- ===== HERO: BANDPIC + LOGO ===== -->
+            <tr>
               <td style="padding:0;">
                 <!-- ADJUST: increase the height value below to move bandpic + logo further down -->
                 <!--[if gte mso 9]>
-                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:440px;">
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:360px;">
                   <v:fill type="frame" src="https://huckfinster.github.io/voidqueen-mail-assets/bandpic_2.png" color="#ebebeb" />
                   <v:textbox inset="0,0,0,0">
                 <![endif]-->
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" background="https://huckfinster.github.io/voidqueen-mail-assets/bandpic_2.png" style="background-image:url('https://huckfinster.github.io/voidqueen-mail-assets/bandpic_2.png'); background-size:contain; background-position:center bottom; background-repeat:no-repeat;">
                   <tr>
-                    <td align="center" valign="top" height="440" style="height:440px; padding:10px 24px 0;">
-                      <div style="font-family:'HypotheticalmoonofMercury','Impact','Arial Black',sans-serif; font-size:24px; letter-spacing:1px; color:#111111; text-align:center; line-height:0.7;margin-top:30px;margin-bottom:-30px">
-                        BERLIN<br />
-                        <span style="font-size:12px; letter-spacing:1px;">POST PUNK</span>
-                      </div>
+                    <td align="center" valign="top" height="360" style="height:360px; padding:10px 24px 0;">
                     </td>
                   </tr>
                   <tr>
-                    <td align="center" valign="bottom" style="padding: 130px 24px 0; line-height:0; font-size:0;">
+                    <td align="center" valign="bottom" style="padding:130px 24px 0; line-height:0; font-size:0;">
                       <img src="https://huckfinster.github.io/voidqueen-mail-assets/logo.png" width="360" alt="VOID QUEEN" style="width:100%; max-width:360px; height:auto; display:block; border:0;" />
                     </td>
                   </tr>
@@ -105,16 +149,7 @@
             <tr>
               <td align="center" style="padding:0 36px 0;">
                 <div style="font-family:'Courier New',Courier,monospace; font-size:18px; line-height:1.5; color:#0c0c0c; text-align:center;">
-                  Seit 1,5 Jahren machen wir gemeinsam<br />
-                  Musik. 5 ver&ouml;ffentlichte Singles , eine<br />
-                  EP mit 4 Songs kommt voraussichtlich<br />
-                  Anfang Sommer.<br />
-                  <br />
-                  Unsere Konzerte leben von N&auml;he,<br />
-                  Spannung und Bewegung. Wir lieben es,<br />
-                  wenn zwischen Band und Publikum etwas<br />
-                  Echtes entsteht und der Raum f&uuml;r einen<br />
-                  Moment kippt.
+                  {{MAIN_TEXT}}
                 </div>
               </td>
             </tr>
@@ -133,7 +168,7 @@
                         <tr>
                           <td align="center" valign="middle" height="160" style="height:140px; padding-bottom:10px;">
                             <div style="font-family:'HypotheticalmoonofMercury','Impact','Arial Black',sans-serif; font-size:34px; letter-spacing:1px;">
-                              <a class="btn-link" href="#" style="color:#ffffff; text-decoration:none; display:inline-block;">MUSIC</a>
+                              <a class="btn-link" href="https://open.spotify.com/artist/5RydbnVELG39nrayiAUkrB?si=gYcqdqMKQGmzO0u2tMxqhQ" style="color:#ffffff; text-decoration:none; display:inline-block;">MUSIC</a>
                             </div>
                           </td>
                         </tr>
@@ -153,7 +188,7 @@
                         <tr>
                           <td align="center" valign="middle" height="160" style="height:140px; padding-bottom:10px;">
                             <div style="font-family:'HypotheticalmoonofMercury','Impact','Arial Black',sans-serif; font-size:34px; letter-spacing:1px;">
-                              <a class="btn-link" href="#" style="color:#ffffff; text-decoration:none; display:inline-block;">VIDEO</a>
+                              <a class="btn-link" href="https://www.youtube.com/watch?v=P002G2R2zVw" style="color:#ffffff; text-decoration:none; display:inline-block;">VIDEO</a>
                             </div>
                           </td>
                         </tr>
@@ -173,7 +208,7 @@
                         <tr>
                           <td align="center" valign="middle" height="160" style="height:140px; padding-bottom:10px;">
                             <div style="font-family:'HypotheticalmoonofMercury','Impact','Arial Black',sans-serif; font-size:34px; letter-spacing:1px;">
-                              <a class="btn-link" href="#" style="color:#ffffff; text-decoration:none; display:inline-block;">SOCIAL<br />MEDIA</a>
+                              <a class="btn-link" href="https://www.instagram.com/voidqueenofficial/?hl=de" style="color:#ffffff; text-decoration:none; display:inline-block;">SOCIAL<br />MEDIA</a>
                             </div>
                           </td>
                         </tr>
@@ -191,16 +226,18 @@
             <tr>
               <td style="padding:0;">
                 <!--[if gte mso 9]>
-                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:220px;">
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:200px;">
                   <v:fill type="frame" src="https://huckfinster.github.io/voidqueen-mail-assets/footer_bottom.png" color="#9b86b8" />
                   <v:textbox inset="0,0,0,0">
                 <![endif]-->
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" background="https://huckfinster.github.io/voidqueen-mail-assets/footer_bottom.png" style="background-image:url('https://huckfinster.github.io/voidqueen-mail-assets/footer_bottom.png'); background-size:contain; background-position:center bottom; background-repeat:no-repeat;">
-            <!-- ===== BOTTOM EXTENDER (LILAC STRIP) ===== -->
-            <tr>
-                    <td align="center" valign="bottom" height="220" style="height:220px; padding-bottom:14px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" background="https://huckfinster.github.io/voidqueen-mail-assets/footer_bottom.png" style="background-image:url('https://huckfinster.github.io/voidqueen-mail-assets/footer_bottom.png'); background-size:cover; background-position:center bottom; background-repeat:no-repeat;">
+                  <tr>
+                    <td align="center" valign="bottom" height="200" style="height:200px; padding-bottom:0px;">
                       <div style="font-family:'HypotheticalmoonofMercury','Impact','Arial Black',sans-serif; font-size:36px; letter-spacing:1px; color:#1b0e2b; text-align:center;">
-                        CONTACT: INFO@VOIDQUEEN.COM
+                        CONTACT:
+                        <a class="footer-link" href="mailto:info@voidqueen.com" style="color:#1b0e2b !important; text-decoration:none !important; border:0; outline:none;">
+                          <span style="color:#1b0e2b !important; text-decoration:none !important;">INFO@VOIDQUEEN.COM</span>
+                        </a>
                       </div>
                     </td>
                   </tr>
@@ -209,6 +246,12 @@
                   </v:textbox>
                 </v:rect>
                 <![endif]-->
+              </td>
+            </tr>
+            <!-- ===== LILAC BLOCK UNDER FOOTER ===== -->
+            <tr>
+              <td style="padding:0; background-color:#a18ac0;">
+                <div style="height:40px; line-height:40px; font-size:0;">&nbsp;</div>
               </td>
             </tr>
           
